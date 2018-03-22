@@ -1,4 +1,5 @@
 <?php
+echo "prout";
 $dir = "./";
 // Open a directory, and read its contents
 if (is_dir($dir)){
