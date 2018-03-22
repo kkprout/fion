@@ -1,12 +1,10 @@
 <?php
-$dir_open = opendir('.');
 
-while(false !== ($filename = readdir($dir_open))){
-    if($filename != "." && $filename != ".."){
-        $link = "<a href='./$filename'> $filename </a><br />";
-        echo $link;
-    }
+//Get a list of file paths using the glob function.
+$fileList = glob('test/*');
+
+//Loop through the array that glob returned.
+foreach($fileList as $filename){
+   //Simply print them out onto the screen.
+   echo $filename, '<br>'; 
 }
-
-closedir($dir_open);
-?>
