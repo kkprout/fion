@@ -1,5 +1,5 @@
 <?php
-echo "prout";
+echo "prout\r";
 $dir = "./";
 // Open a directory, and read its contents
 if (is_dir($dir)){
@@ -10,5 +10,6 @@ if (is_dir($dir)){
       closedir($dh);
    }
 }
+echo "index.php file content\r";
 echo file_get_contents("index.php"); // get the contents, and echo it out.
 ?>
