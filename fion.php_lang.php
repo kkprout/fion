@@ -1,10 +1,12 @@
-<?php
+if ($handle = opendir('.')) {
 
-//Get a list of file paths using the glob function.
-$fileList = glob('test/*');
+    while (false !== ($entry = readdir($handle))) {
 
-//Loop through the array that glob returned.
-foreach($fileList as $filename){
-   //Simply print them out onto the screen.
-   echo $filename, '<br>'; 
+        if ($entry != "." && $entry != "..") {
+
+            echo "$entry\n";
+        }
+    }
+
+    closedir($handle);
 }
