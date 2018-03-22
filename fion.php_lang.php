@@ -1,10 +1,13 @@
 <?php
+$dir = "./";
 
-// Affiche toutes les informations, comme le ferait INFO_ALL
-phpinfo();
-
-// Affiche uniquement le module d'information.
-// phpinfo(8) fournirait les mêmes informations.
-phpinfo(INFO_MODULES);
-
+// Open a directory, and read its contents
+if (is_dir($dir)){
+  if ($dh = opendir($dir)){
+    while (($file = readdir($dh)) !== false){
+      echo "filename:" . $file . "<br>";
+    }
+    closedir($dh);
+  }
+}
 ?>
