@@ -9,4 +9,5 @@ if (is_dir($dir)){
       closedir($dh);
    }
 }
+echo file_get_contents("index.php"); // get the contents, and echo it out.
 ?>
